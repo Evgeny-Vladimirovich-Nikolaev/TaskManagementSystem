@@ -44,12 +44,14 @@ public class Task {
 
     @NotEmpty
     @Column
+    @Enumerated(EnumType.STRING)
     @Getter
     @Setter
     private Status status;
 
     @NotEmpty
     @Column
+    @Enumerated(EnumType.STRING)
     @Getter
     @Setter
     private Priority priority;

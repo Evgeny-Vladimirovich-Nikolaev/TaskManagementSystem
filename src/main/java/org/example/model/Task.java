@@ -33,13 +33,15 @@ public class Task {
     private String description;
 
     @NotEmpty
-    @Column
     @Getter
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
     private Author author;
 
     @NotEmpty
-    @Column
     @Getter
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "performer_id")
     private Performer performer;
 
     @NotEmpty

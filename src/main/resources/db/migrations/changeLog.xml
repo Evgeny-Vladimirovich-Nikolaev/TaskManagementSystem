@@ -5,5 +5,7 @@
    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="persons.xml" relativeToChangelogFile="true"/>
+    <include file="authors.xml" relativeToChangelogFile="true"/>
+    <include file="performers.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

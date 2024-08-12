@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,5 +25,9 @@ public class Performer {
     @Getter
     @OneToOne
     private Person person;
+
+
+    @OneToMany(mappedBy = "performer", cascade = CascadeType.ALL)
+    private List<Task> tasks;
 
 }

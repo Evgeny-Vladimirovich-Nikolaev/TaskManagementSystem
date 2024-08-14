@@ -7,5 +7,6 @@
     <include file="persons.xml" relativeToChangelogFile="true"/>
     <include file="authors.xml" relativeToChangelogFile="true"/>
     <include file="performers.xml" relativeToChangelogFile="true"/>
+    <include file="tasks.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

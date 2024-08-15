@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,7 +51,6 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Transactional
     public PersonDto save(@Valid PersonDto personDto) {
-        long id = personDto.getId();
         Person person = personMapper.toEntity(personDto);
         return personMapper.toDto(personRepository.save(person));
     }

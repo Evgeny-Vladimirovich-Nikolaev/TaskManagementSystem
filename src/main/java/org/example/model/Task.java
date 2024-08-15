@@ -1,9 +1,6 @@
 package org.example.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.example.enums.Priority;
 import org.example.enums.Status;
 
@@ -20,28 +17,33 @@ public class Task {
     @Column(name = "task_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
+    @Setter
     private Long id;
 
     @NotEmpty
     @Column
     @Getter
+    @Setter
     private String header;
 
     @NotEmpty
     @Column
     @Getter
+    @Setter
     private String description;
 
     @NotEmpty
-    @Getter
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
+    @Getter
+    @Setter
     private Author author;
 
     @NotEmpty
-    @Getter
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "performer_id")
+    @Getter
+    @Setter
     private Performer performer;
 
     @NotEmpty

@@ -1,8 +1,6 @@
 package org.example.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -18,16 +16,20 @@ public class Performer {
     @Column(name = "performer_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
+    @Setter
     private Long id;
 
     @NotEmpty
     @JoinColumn(name = "person_id")
-    @Getter
     @OneToOne
+    @Getter
+    @Setter
     private Person person;
 
 
     @OneToMany(mappedBy = "performer", cascade = CascadeType.ALL)
+    @Getter
+    @Setter
     private List<Task> taskList;
 
 }

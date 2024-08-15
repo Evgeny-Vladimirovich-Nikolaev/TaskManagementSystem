@@ -1,8 +1,6 @@
 package org.example.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -18,11 +16,13 @@ public class Person {
     @Column(name = "person_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
+    @Setter
     private Long id;
 
     @NotEmpty
     @Column
     @Getter
+    @Setter
     private String login;
 
 }

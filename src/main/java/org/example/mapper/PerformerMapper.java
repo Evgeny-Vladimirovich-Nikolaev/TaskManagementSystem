@@ -1,8 +1,6 @@
 package org.example.mapper;
 
-import org.example.dto.AuthorDto;
 import org.example.dto.PerformerDto;
-import org.example.model.Author;
 import org.example.model.Performer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

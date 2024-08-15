@@ -1,8 +1,6 @@
 package org.example.mapper;
 
-import org.example.dto.PerformerDto;
 import org.example.dto.TaskDto;
-import org.example.model.Performer;
 import org.example.model.Task;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

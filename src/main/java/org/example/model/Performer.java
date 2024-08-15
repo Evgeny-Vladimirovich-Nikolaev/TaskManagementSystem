@@ -28,6 +28,6 @@ public class Performer {
 
 
     @OneToMany(mappedBy = "performer", cascade = CascadeType.ALL)
-    private List<Task> tasks;
+    private List<Task> taskList;
 
 }

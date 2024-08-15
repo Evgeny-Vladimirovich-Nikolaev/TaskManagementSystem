@@ -27,7 +27,7 @@ public class Author {
     private Person person;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
-    private List<Task> tasks;
+    private List<Task> taskList;
 
 
 }
